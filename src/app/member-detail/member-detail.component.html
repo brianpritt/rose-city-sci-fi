@@ -2,16 +2,12 @@
   <div class="row">
     <h2 class="card-title">{{(memberToDisplay | async)?.name}}</h2>
   </div>
+  <hr>
   <div class="row">
-    <!-- <div class="">
-      <img class="float-left" src="{{(memberToDisplay | async)?.img}}">
-    </div> -->
     <div class="">
-      <h3>Name: {{(memberToDisplay | async)?.email}}</h3>
+      <h5>Contact: {{(memberToDisplay | async)?.email}}</h5>
       <div class="">
-        <h5>Bio: {{(memberToDisplay | async)?.bio}}</h5>
-        <!-- <h5>Category: {{(memberToDisplay | async)?.category}}</h5> -->
-        <!-- <h5>Region: {{(memberToDisplay | async)?.region}}</h5> -->
+        <p>Bio: {{(memberToDisplay | async)?.bio}}</p>
       </div>
     </div>
   </div>

@@ -1,21 +1,19 @@
+
 <div class="row" >
-  <div class="col s3 m3" *ngFor="let member of members |async" (click)="viewMember(member)" >
+  <div class="col s4 m4" *ngFor="let member of members |async" (click)="viewMember(member)" >
     <div class="card">
-      <p>
-        {{member.name}}
-      </p>
-      <!-- <div class="card-image">
-        <img src={{project.img}}>
-        <span class="card-title">{{member.name}}</span>
-      </div> -->
-      <!-- <div class="card-content">
-        <p>Borrower: {{project.borrower}}</p>
-        <p>Loan Amount: {{project.totalLoanAmount}}</p>
-        <p>Region: {{project.region}}</p>
-      </div> -->
-      <!-- <div class="card-action">
-        <a (click)="viewProject(project)">View Details</a>
-      </div> -->
+      <h3 class="name">{{member.name}}</h3>
+
+      <div class="card-content">
+        <p>Favorite Author: {{member.favoriteAuthor}}</p>
+        <p>Tag line: {{member.tagLine}}</p>
+
+      </div>
+      <hr>
+      <div *ngIf="currentRoute === '/admin'">
+          <button class="btn delete red darken-4" (click)="deleteSelectedProject(project)">Delete</button>
+          <button class="btn edit blue darken-3" (click)="editProject(project)">Edit</button>
+        </div>
     </div>
   </div>
 </div>

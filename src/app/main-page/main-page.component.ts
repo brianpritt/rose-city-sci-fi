@@ -14,6 +14,7 @@ import { MemberService} from '../member.service';
 })
 export class MainPageComponent implements OnInit {
   members: FirebaseListObservable<any[]>;
+  currentRoute: string = this.router.url;
   constructor(private router: Router, private memberService: MemberService) { }
   ngOnInit() {
     this.members = this.memberService.getProjects();

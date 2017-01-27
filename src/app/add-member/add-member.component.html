@@ -1,0 +1,22 @@
+<div class="container">
+  <div>
+    <h3>Add New Member</h3>
+
+    <label>Name</label>
+    <input #newName required>
+
+    <label>Email</label>
+    <input #newEmail>
+
+    <label>Bio</label>
+    <textarea #newBio></textarea>
+
+    <label>Favorite Author </label>
+    <input #newFavoriteAuthor>
+
+    <label>Tag Line</label>
+    <input #newTagline>
+
+    <button class="btn" (click)="submitForm(newName.value, newEmail.value, newBio.value, newFavoriteAuthor.value, newTagline.value)" routerLink="">Add</button>
+  </div>
+</div>

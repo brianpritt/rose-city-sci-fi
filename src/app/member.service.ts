@@ -14,4 +14,7 @@ export class MemberService {
   getMemberByKey(key:string){
     return this.angularFire.database.object('members/' + key);
   }
+  addMember(newMember: Member){
+    this.members.push(newMember);
+  }
 }
