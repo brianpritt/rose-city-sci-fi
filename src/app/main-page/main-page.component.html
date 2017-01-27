@@ -1,0 +1,23 @@
+<div class="row" >
+  <div class="col s3 m3" *ngFor="let member of members |async" >
+    <div class="card">
+      <p>
+        {{member.name}}
+      </p>
+      <!-- <div class="card-image">
+        <img src={{project.img}}>
+        <span class="card-title">{{member.name}}</span>
+      </div> -->
+      <!-- <div class="card-content">
+        <p>Borrower: {{project.borrower}}</p>
+        <p>Loan Amount: {{project.totalLoanAmount}}</p>
+        <p>Region: {{project.region}}</p>
+      </div> -->
+      <!-- <div class="card-action">
+        <a (click)="viewProject(project)">View Details</a>
+      </div> -->
+    </div>
+  </div>
+</div>
+
+<!-- (click)="viewProject(project)" -->
