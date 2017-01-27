@@ -14,7 +14,7 @@ import { MemberService} from '../member.service';
 })
 export class MainPageComponent implements OnInit {
   @Output() editMemberToSend = new EventEmitter();
-
+  filterByRoleValue: any = "All"
   members: FirebaseListObservable<any[]>;
   currentRoute: string = this.router.url;
   constructor(private router: Router, private memberService: MemberService) { }
@@ -32,4 +32,8 @@ export class MainPageComponent implements OnInit {
   editMember(member){
     this.editMemberToSend.emit(member);
   }
+  filterByRole(role) {
+    this.filterByRoleValue = role;
+    console.log(role);
+}
 }

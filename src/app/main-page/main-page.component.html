@@ -1,6 +1,15 @@
+<button class="btn add-button"*ngIf="currentRoute === '/admin'" routerLink='add'>Add Member</button>
 
+<div class="row">
+  <select class="select" (change)='filterByRole($event.target.value)'>
+    <option value="all" selected="selected">All</option>
+    <option value="member">Member</option>
+    <option value="board">Board Member</option>
+    <option value="president">President</option>
+  </select>
+</div>
 <div class="row" >
-  <div class="col s4 m4" *ngFor="let member of members |async"  >
+  <div class="col s4 m4" *ngFor="let member of members |async | role:filterByRoleValue"  >
     <div class="card">
       <h3 class="name" (click)="viewMember(member)">{{member.name}}</h3>
 

@@ -11,6 +11,8 @@ import { MainPageComponent } from './main-page/main-page.component';
 import { MemberDetailComponent } from './member-detail/member-detail.component';
 import { AdminComponent } from './admin/admin.component';
 import { AddMemberComponent } from './add-member/add-member.component';
+import { AboutComponent } from './about/about.component';
+import { RolePipe } from './role.pipe';
 
 export const firebaseConfig = {
   apiKey: masterFirebaseConfig.apiKey,
@@ -25,7 +27,9 @@ export const firebaseConfig = {
     MainPageComponent,
     MemberDetailComponent,
     AdminComponent,
-    AddMemberComponent
+    AddMemberComponent,
+    AboutComponent,
+    RolePipe
   ],
   imports: [
     BrowserModule,

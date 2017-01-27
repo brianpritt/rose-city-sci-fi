@@ -40,9 +40,16 @@
 
         <label>Tag Line</label>
         <input #newTagline required>
-
       </span>
-      <button class="btn" (click)="submitForm(newName.value, newEmail.value, newBio.value, newFavoriteAuthor.value, newTagline.value)" routerLink="">Add</button>
+
+        <label>Role</label>
+        <select #newRole class="select drop-down input-field">
+          <option value="member">Member</option>
+          <option value="board">Board Member</option>
+          <option value="president">President</option>
+        </select>
+
+      <button class="btn" (click)="submitForm(newName.value, newEmail.value, newBio.value, newFavoriteAuthor.value, newTagline.value, newRole.value)" routerLink="">Add</button>
     </div>
   </div>
 </div>

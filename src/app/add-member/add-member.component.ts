@@ -14,8 +14,8 @@ export class AddMemberComponent implements OnInit {
 
   ngOnInit() {
   }
-  submitForm(name: string, email: string, bio: string, favoriteAuthor: string, tagLine: string){
-    var newMember: Member = new Member(name, email, bio, favoriteAuthor, tagLine);
+  submitForm(name: string, email: string, bio: string, favoriteAuthor: string, tagLine: string, role: string){
+    var newMember: Member = new Member(name, email, bio, favoriteAuthor, tagLine, role);
     this.memberService.addMember(newMember);
   }
 

@@ -30,7 +30,8 @@ export class MemberService {
         email: memberProfile.email,
         bio: memberProfile.bio,
         favoriteAuthor: memberProfile.favoriteAuthor,
-        tagLine: memberProfile.tagLine
+        tagLine: memberProfile.tagLine,
+        role: memberProfile.role
       });
   }
 }

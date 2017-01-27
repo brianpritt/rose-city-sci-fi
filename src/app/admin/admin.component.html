@@ -20,10 +20,15 @@
           <label>Tag line</label>
           <input [(ngModel)]=memberToEdit.tagLine>
         </span>
+        <label>Region</label>
+        <select [(ngModel)]=memberToEdit.role class="select drop-down input-field">
+          <option value="member">Member</option>
+          <option value="board">Board Member</option>
+          <option value="president">President</option>
+        </select>
         <button class="btn" (click)="startUpdating(memberToEdit); doneEditing()">Done</button>
       </div>
     </div>
   </div>
 </div>
-
 <app-main-page (editMemberToSend)="editMember($event)"></app-main-page>
