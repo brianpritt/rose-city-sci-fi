@@ -17,4 +17,8 @@ export class MemberService {
   addMember(newMember: Member){
     this.members.push(newMember);
   }
+  deleteMember(memberToDelete){
+    var memberEntryInFirebase = this.getMemberByKey(memberToDelete.$key);
+    memberEntryInFirebase.remove();
+  }
 }

@@ -22,4 +22,10 @@ export class MainPageComponent implements OnInit {
   viewMember(member){
     this.router.navigate(['members', member.$key]);
   }
+  deleteSelectedMember(member){
+    if(confirm("Are you sure?")){
+    console.log(member);
+    this.memberService.deleteMember(member);
+    }
+  }
 }
