@@ -11,5 +11,7 @@ export class MemberService {
   getProjects(){
     return this.members;
   }
-
+  getMemberByKey(key:string){
+    return this.angularFire.database.object('members/' + key);
+  }
 }

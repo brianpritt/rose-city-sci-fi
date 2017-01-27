@@ -1,5 +1,5 @@
 <div class="row" >
-  <div class="col s3 m3" *ngFor="let member of members |async" >
+  <div class="col s3 m3" *ngFor="let member of members |async" (click)="viewMember(member)" >
     <div class="card">
       <p>
         {{member.name}}
@@ -19,5 +19,3 @@
     </div>
   </div>
 </div>
-
-<!-- (click)="viewProject(project)" -->

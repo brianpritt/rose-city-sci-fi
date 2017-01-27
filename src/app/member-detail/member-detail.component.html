@@ -1,0 +1,17 @@
+<div class="container">
+  <div class="row">
+    <h2 class="card-title">{{(memberToDisplay | async)?.name}}</h2>
+  </div>
+  <div class="row">
+    <!-- <div class="">
+      <img class="float-left" src="{{(memberToDisplay | async)?.img}}">
+    </div> -->
+    <div class="">
+      <h3>Name: {{(memberToDisplay | async)?.email}}</h3>
+      <div class="">
+        <h5>Bio: {{(memberToDisplay | async)?.bio}}</h5>
+        <!-- <h5>Category: {{(memberToDisplay | async)?.category}}</h5> -->
+        <!-- <h5>Region: {{(memberToDisplay | async)?.region}}</h5> -->
+      </div>
+    </div>
+  </div>

@@ -18,5 +18,7 @@ export class MainPageComponent implements OnInit {
   ngOnInit() {
     this.members = this.memberService.getProjects();
   }
-
+  viewMember(member){
+    this.router.navigate(['members', member.$key]);
+  }
 }
