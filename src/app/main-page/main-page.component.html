@@ -1,8 +1,8 @@
 
 <div class="row" >
-  <div class="col s4 m4" *ngFor="let member of members |async" (click)="viewMember(member)" >
+  <div class="col s4 m4" *ngFor="let member of members |async"  >
     <div class="card">
-      <h3 class="name">{{member.name}}</h3>
+      <h3 class="name" (click)="viewMember(member)">{{member.name}}</h3>
 
       <div class="card-content">
         <p>Favorite Author: {{member.favoriteAuthor}}</p>
@@ -12,7 +12,7 @@
       <hr>
       <div *ngIf="currentRoute === '/admin'">
           <button class="btn delete red darken-4" (click)="deleteSelectedMember(member)">Delete</button>
-          <button class="btn edit blue darken-3" (click)="editProject(project)">Edit</button>
+          <button class="btn edit blue darken-3" (click)="editMember(member)">Edit</button>
         </div>
     </div>
   </div>

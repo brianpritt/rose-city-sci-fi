@@ -4,7 +4,7 @@
       <a routerLink='' class="brand-logo">Rose City Sci-Fi Book Club</a>
       <ul id="nav-mobile" class="right hide-on-med-and-down">
         <li><a routerLink=''>About Us</a></li>
-        <li><a routerLink='add'>Add Member</a></li>
+        <li><a *ngIf="currentRoute === '/admin'" routerLink='add'>Add Member</a></li>
         <li><a routerLink='admin'>Admin</a></li>
 
       </ul>

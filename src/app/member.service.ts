@@ -8,7 +8,7 @@ export class MemberService {
   constructor(private angularFire: AngularFire) {
     this.members = angularFire.database.list('members');
  }
-  getProjects(){
+  getMembers(){
     return this.members;
   }
   getMemberByKey(key:string){
@@ -20,5 +20,17 @@ export class MemberService {
   deleteMember(memberToDelete){
     var memberEntryInFirebase = this.getMemberByKey(memberToDelete.$key);
     memberEntryInFirebase.remove();
+  }
+  updateMember(memberProfile){
+    var memberEntryInFirebase = this.getMemberByKey(memberProfile.$key);
+    console.log(memberProfile);
+    memberEntryInFirebase.update(
+      {
+        name: memberProfile.name,
+        email: memberProfile.email,
+        bio: memberProfile.bio,
+        favoriteAuthor: memberProfile.favoriteAuthor,
+        tagLine: memberProfile.tagLine
+      });
   }
 }

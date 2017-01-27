@@ -1,4 +1,4 @@
-<div class="container">
+<!-- <div class="container">
   <div>
     <h3>Add New Member</h3>
 
@@ -18,5 +18,31 @@
     <input #newTagline>
 
     <button class="btn" (click)="submitForm(newName.value, newEmail.value, newBio.value, newFavoriteAuthor.value, newTagline.value)" routerLink="">Add</button>
+  </div>
+</div> -->
+<div class="row">
+  <div class="col s12 m5">
+    <div class="card-panel teal">
+      <span class="white-text">
+        <h3>Add New Member</h3>
+
+        <label>Name</label>
+        <input #newName required>
+
+        <label>Email</label>
+        <input #newEmail required>
+
+        <label>Bio</label>
+        <textarea #newBio required></textarea>
+
+        <label>Favorite Author </label>
+        <input #newFavoriteAuthor required>
+
+        <label>Tag Line</label>
+        <input #newTagline required>
+
+      </span>
+      <button class="btn" (click)="submitForm(newName.value, newEmail.value, newBio.value, newFavoriteAuthor.value, newTagline.value)" routerLink="">Add</button>
+    </div>
   </div>
 </div>
