@@ -1,0 +1,17 @@
+{
+  "name": "rose-city-sci-fi",
+  "description": "",
+  "main": "",
+  "authors": [
+    "Brian Pritt <brianpritt@gmail.com>"
+  ],
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
