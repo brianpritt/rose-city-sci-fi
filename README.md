@@ -1,31 +1,44 @@
 # RoseCitySciFi
 
-This project was generated with [angular-cli](https://github.com/angular/angular-cli) version 1.0.0-beta.26.
+* By Brian Pritt
 
-## Development server
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+This application is a simple club roster that allows users to search through a database of other users, and allows an administrator add, edit, and delete user instances.
 
-## Code scaffolding
+## Prerequisites
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive/pipe/service/class/module`.
+You will need the following things properly installed on your computer.
 
-## Build
+* [Git](https://git-scm.com/)
+* [Node.js](https://nodejs.org/) (with NPM)
+* [Bower](https://bower.io/)
+* [AngularJS](https://angularjs.org/)
+* [Angular-CLI](https://cli.angular.io/)
+* [GulpJS](http://gulpjs.com/)
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `-prod` flag for a production build.
+This app also relies on Google Firebase.  The user will need to make an accout [here](https://firebase.google.com/).  Create a new project.  Navigate to the database selection, and upload the scificlub.json file included with the project.  The user will also need to change the permissions to the database in the rules section. Both read and write need to be set to true.
+In the overview tab copy and paste the approriate code for this app into a new file called api-key.ts in the src/spp folder.
 
-## Running unit tests
+## Installation
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+* `git clone https://github.com/brianpritt/rose-city-sci-fi` this repository
+* `cd rose-city-sci-fi`
+* `npm install`
+* `bower install -g`
+* `bower init`
 
-## Running end-to-end tests
+## Running / Development
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-Before running the tests make sure you are serving the app via `ng serve`.
+* `ng serve`
+visit your app at [http://localhost:4200](http://localhost:4200).
 
-## Deploying to GitHub Pages
 
-Run `ng github-pages:deploy` to deploy to GitHub Pages.
+### Building
 
-## Further help
+* `ng build`
 
-To get more help on the `angular-cli` use `ng help` or go check out the [Angular-CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+### Known Bugs
+_No known bugs at last commit_
+
+
+### License
+* GPLv3
