@@ -1,3 +1,6 @@
 select{
   display: inline-block;
 }
+.card-content{
+  height: 175px;
+}

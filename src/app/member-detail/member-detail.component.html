@@ -1,13 +1,15 @@
-<div class="container">
+
   <div class="row">
-    <h2 class="card-title">{{(memberToDisplay | async)?.name}}</h2>
-  </div>
-  <hr>
-  <div class="row">
-    <div class="">
-      <h5>Contact: {{(memberToDisplay | async)?.email}}</h5>
-      <div class="">
-        <p>Bio: {{(memberToDisplay | async)?.bio}}</p>
+        <div class="col s12 m8 offset-m2">
+          <div class="card-panel teal">
+            <span class="white-text">
+              <h2>{{(memberToDisplay | async)?.name}}</h2>
+              <h5>Contact: {{(memberToDisplay | async)?.email}}</h5>
+              <hr>
+              <p>Bio: {{(memberToDisplay | async)?.bio}}</p>
+              <hr>
+              <p>{{(memberToDisplay | async)?.tagline}}</p>
+            </span>
+          </div>
+        </div>
       </div>
-    </div>
-  </div>
